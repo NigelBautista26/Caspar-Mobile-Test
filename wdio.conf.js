@@ -1,3 +1,4 @@
+let { join } = require('path')
 exports.config = {
     //
     // ====================
@@ -53,7 +54,7 @@ exports.config = {
         ignoreHiddenApiPolicyError: true,
         'appium:deviceName': 'Pixel 2',
         automationName: "UiAutomator2",
-        'appium:app': '/Users/nigelbautista/Downloads/caspar.apk'
+        'appium:app': join(process.cwd(), '/caspar.apk')
     }],
     //
     // ===================
