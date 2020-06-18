@@ -1,0 +1,7 @@
+For some extra bonus points, think about how you would go about setting it up in a CI/CD
+pipeline, what changes would you need to make to your solution for making it CI ready?
+
+# CI/CD process i would recommend...
+
+I would recomend to set up the tests to follow what i think is currently the best practice,
+we would need to setup a "Pre Receive Server Side Hook" in our Jenkins pipeline, so that our UI, Integration and UNIT tests will be run first everytime a new build happens when we merge a new PR into our Origin Master Branch. Therefore, Jenkins will only merge to the Origin Master if all levels of tests passed and the build is successful. this will allow us to follow the best practice of "Shift to the left" in agile development. This will find issues early on in the process and also lessen the need of regression testing. Then we can just do a re-test of all tickets we worked on for our sprint when the time comes that we need to do a release. This will make the delivery a lot faster and at the sametime, give us confidence that our Test Pyramid covered everything. I would still do a quick health check of the application before releasing, its just the tester in me that really waant to triple check everything haha! Lastly i would suggest we use AWS for CD it can be integrated with Jenkins and automate the process of putting the artifacts from a successful build into an AWS S3 Bucket, from there we can just run an AWS instance of our applicaiton.
