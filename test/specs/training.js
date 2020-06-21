@@ -2,7 +2,7 @@
 const train = require('../../components/train')
 const login = require("../../components/login")
 
-describe("Test The Application", () => {
+describe("Test The Application...", () => {
     beforeEach(() => { 
         driver.launchApp() 
         login.login()
