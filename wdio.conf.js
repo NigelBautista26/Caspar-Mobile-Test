@@ -50,7 +50,6 @@ exports.config = {
     //
     capabilities: [{
         platformName: 'Android',
-        "automationName": "UIAutomator2",
         ignoreHiddenApiPolicyError: true,
         'appium:deviceName': 'Pixel 2',
         automationName: "UiAutomator2",
