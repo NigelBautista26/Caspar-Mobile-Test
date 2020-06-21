@@ -1,16 +1,21 @@
-const wdio = require("webdriverio")
+// const wdio = require("webdriverio")
 const train = require('../../components/train')
 const login = require("../../components/login")
 
 describe("Test The Application", () => {
-    before(() => {
-		login.login()
-	})
     beforeEach(() => { 
+        driver.launchApp() 
+        login.login()
         train.goToTrainingExercise()
     })
     it("Start an exercise…...", () => {
         train.startTrainingExercise()
+    })
+    it("Skip an exercise…...", () => {
+        train.skipTrainingExercise()
+    })
+    afterEach(() => { 
+        driver.closeApp()
     })
 
 })
