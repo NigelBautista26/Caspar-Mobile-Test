@@ -50,7 +50,6 @@ exports.config = {
     //
     capabilities: [{
         platformName: 'Android',
-        ignoreHiddenApiPolicyError: true,
         'appium:deviceName': 'Pixel 2',
         automationName: "UiAutomator2",
         'appium:app': join(process.cwd(), '/caspar.apk')

@@ -1,5 +1,5 @@
 // const wdio = require("webdriverio")
-const train = require('../../components/train')
+const train = require('../../components/training')
 const login = require("../../components/login")
 
 describe("Test The Application...", () => {
